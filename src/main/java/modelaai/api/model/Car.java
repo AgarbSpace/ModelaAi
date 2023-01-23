@@ -1,5 +1,7 @@
 package modelaai.api.model;
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,7 +24,7 @@ public class Car {
         this.anoModelo = data.anoModelo();
     }
 
-      @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
@@ -33,7 +35,7 @@ public class Car {
     private String fabricante;
 
     @Column(length = 10, nullable = false)
-    private String dataFabricacao;
+    private Date dataFabricacao;
 
     @Column(length = 50, nullable = false)
     private double valor;
